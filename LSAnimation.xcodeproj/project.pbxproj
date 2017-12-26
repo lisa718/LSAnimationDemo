@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		56A9E2CDCADE620882CCB376 /* libPods-LSAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B63B84993FE74BF8818273 /* libPods-LSAnimation.a */; };
+		E12708771FF242FA00ECE880 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E12708761FF242FA00ECE880 /* AppDelegate.m */; };
+		E127087A1FF242FA00ECE880 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E12708791FF242FA00ECE880 /* ViewController.m */; };
+		E127087F1FF242FA00ECE880 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E127087E1FF242FA00ECE880 /* Assets.xcassets */; };
+		E12708851FF242FA00ECE880 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E12708841FF242FA00ECE880 /* main.m */; };
+		E127088F1FF242FB00ECE880 /* LSAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E127088E1FF242FB00ECE880 /* LSAnimationTests.m */; };
+		E127089A1FF242FB00ECE880 /* LSAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E12708991FF242FB00ECE880 /* LSAnimationUITests.m */; };
+		E132F8451FF243CF002E3B7F /* LSNavbarAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E132F8431FF243CF002E3B7F /* LSNavbarAnimationController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E127088B1FF242FA00ECE880 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E127086A1FF242FA00ECE880 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E12708711FF242FA00ECE880;
+			remoteInfo = LSAnimation;
+		};
+		E12708961FF242FB00ECE880 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E127086A1FF242FA00ECE880 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E12708711FF242FA00ECE880;
+			remoteInfo = LSAnimation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F8DA6226A1286358F6FA538 /* Pods-LSAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSAnimation.release.xcconfig"; path = "Pods/Target Support Files/Pods-LSAnimation/Pods-LSAnimation.release.xcconfig"; sourceTree = "<group>"; };
+		2163A6FF2A04DAEBBEC6165A /* Pods-LSAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSAnimation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LSAnimation/Pods-LSAnimation.debug.xcconfig"; sourceTree = "<group>"; };
+		89B63B84993FE74BF8818273 /* libPods-LSAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LSAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E12708721FF242FA00ECE880 /* LSAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E12708751FF242FA00ECE880 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E12708761FF242FA00ECE880 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E12708781FF242FA00ECE880 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E12708791FF242FA00ECE880 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E127087E1FF242FA00ECE880 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E12708831FF242FA00ECE880 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E12708841FF242FA00ECE880 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E127088A1FF242FA00ECE880 /* LSAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LSAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E127088E1FF242FB00ECE880 /* LSAnimationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSAnimationTests.m; sourceTree = "<group>"; };
+		E12708901FF242FB00ECE880 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E12708951FF242FB00ECE880 /* LSAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LSAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E12708991FF242FB00ECE880 /* LSAnimationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSAnimationUITests.m; sourceTree = "<group>"; };
+		E127089B1FF242FB00ECE880 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E132F8431FF243CF002E3B7F /* LSNavbarAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSNavbarAnimationController.m; sourceTree = "<group>"; };
+		E132F8441FF243CF002E3B7F /* LSNavbarAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSNavbarAnimationController.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E127086F1FF242FA00ECE880 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56A9E2CDCADE620882CCB376 /* libPods-LSAnimation.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E12708871FF242FA00ECE880 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E12708921FF242FB00ECE880 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E6FB069391CCE39CB141E68 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2163A6FF2A04DAEBBEC6165A /* Pods-LSAnimation.debug.xcconfig */,
+				0F8DA6226A1286358F6FA538 /* Pods-LSAnimation.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		94782D53D055EBA2FEAEE69E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89B63B84993FE74BF8818273 /* libPods-LSAnimation.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E12708691FF242FA00ECE880 = {
+			isa = PBXGroup;
+			children = (
+				E12708741FF242FA00ECE880 /* LSAnimation */,
+				E127088D1FF242FB00ECE880 /* LSAnimationTests */,
+				E12708981FF242FB00ECE880 /* LSAnimationUITests */,
+				E12708731FF242FA00ECE880 /* Products */,
+				3E6FB069391CCE39CB141E68 /* Pods */,
+				94782D53D055EBA2FEAEE69E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E12708731FF242FA00ECE880 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E12708721FF242FA00ECE880 /* LSAnimation.app */,
+				E127088A1FF242FA00ECE880 /* LSAnimationTests.xctest */,
+				E12708951FF242FB00ECE880 /* LSAnimationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E12708741FF242FA00ECE880 /* LSAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				E132F8441FF243CF002E3B7F /* LSNavbarAnimationController.h */,
+				E132F8431FF243CF002E3B7F /* LSNavbarAnimationController.m */,
+				E12708751FF242FA00ECE880 /* AppDelegate.h */,
+				E12708761FF242FA00ECE880 /* AppDelegate.m */,
+				E12708781FF242FA00ECE880 /* ViewController.h */,
+				E12708791FF242FA00ECE880 /* ViewController.m */,
+				E127087E1FF242FA00ECE880 /* Assets.xcassets */,
+				E12708831FF242FA00ECE880 /* Info.plist */,
+				E12708841FF242FA00ECE880 /* main.m */,
+			);
+			path = LSAnimation;
+			sourceTree = "<group>";
+		};
+		E127088D1FF242FB00ECE880 /* LSAnimationTests */ = {
+			isa = PBXGroup;
+			children = (
+				E127088E1FF242FB00ECE880 /* LSAnimationTests.m */,
+				E12708901FF242FB00ECE880 /* Info.plist */,
+			);
+			path = LSAnimationTests;
+			sourceTree = "<group>";
+		};
+		E12708981FF242FB00ECE880 /* LSAnimationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E12708991FF242FB00ECE880 /* LSAnimationUITests.m */,
+				E127089B1FF242FB00ECE880 /* Info.plist */,
+			);
+			path = LSAnimationUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E12708711FF242FA00ECE880 /* LSAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E127089E1FF242FB00ECE880 /* Build configuration list for PBXNativeTarget "LSAnimation" */;
+			buildPhases = (
+				51C3599FAF6016E8A341BF74 /* [CP] Check Pods Manifest.lock */,
+				E127086E1FF242FA00ECE880 /* Sources */,
+				E127086F1FF242FA00ECE880 /* Frameworks */,
+				E12708701FF242FA00ECE880 /* Resources */,
+				3512AD2CA5EF569ECD341CA6 /* [CP] Embed Pods Frameworks */,
+				7DF4400B4F9CA7A591B9E8CA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LSAnimation;
+			productName = LSAnimation;
+			productReference = E12708721FF242FA00ECE880 /* LSAnimation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E12708891FF242FA00ECE880 /* LSAnimationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E12708A11FF242FB00ECE880 /* Build configuration list for PBXNativeTarget "LSAnimationTests" */;
+			buildPhases = (
+				E12708861FF242FA00ECE880 /* Sources */,
+				E12708871FF242FA00ECE880 /* Frameworks */,
+				E12708881FF242FA00ECE880 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E127088C1FF242FA00ECE880 /* PBXTargetDependency */,
+			);
+			name = LSAnimationTests;
+			productName = LSAnimationTests;
+			productReference = E127088A1FF242FA00ECE880 /* LSAnimationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E12708941FF242FB00ECE880 /* LSAnimationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E12708A41FF242FB00ECE880 /* Build configuration list for PBXNativeTarget "LSAnimationUITests" */;
+			buildPhases = (
+				E12708911FF242FB00ECE880 /* Sources */,
+				E12708921FF242FB00ECE880 /* Frameworks */,
+				E12708931FF242FB00ECE880 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E12708971FF242FB00ECE880 /* PBXTargetDependency */,
+			);
+			name = LSAnimationUITests;
+			productName = LSAnimationUITests;
+			productReference = E12708951FF242FB00ECE880 /* LSAnimationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E127086A1FF242FA00ECE880 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = lisa;
+				TargetAttributes = {
+					E12708711FF242FA00ECE880 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					E12708891FF242FA00ECE880 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E12708711FF242FA00ECE880;
+					};
+					E12708941FF242FB00ECE880 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E12708711FF242FA00ECE880;
+					};
+				};
+			};
+			buildConfigurationList = E127086D1FF242FA00ECE880 /* Build configuration list for PBXProject "LSAnimation" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E12708691FF242FA00ECE880;
+			productRefGroup = E12708731FF242FA00ECE880 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E12708711FF242FA00ECE880 /* LSAnimation */,
+				E12708891FF242FA00ECE880 /* LSAnimationTests */,
+				E12708941FF242FB00ECE880 /* LSAnimationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E12708701FF242FA00ECE880 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E127087F1FF242FA00ECE880 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E12708881FF242FA00ECE880 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E12708931FF242FB00ECE880 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3512AD2CA5EF569ECD341CA6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LSAnimation/Pods-LSAnimation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51C3599FAF6016E8A341BF74 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7DF4400B4F9CA7A591B9E8CA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LSAnimation/Pods-LSAnimation-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E127086E1FF242FA00ECE880 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E127087A1FF242FA00ECE880 /* ViewController.m in Sources */,
+				E132F8451FF243CF002E3B7F /* LSNavbarAnimationController.m in Sources */,
+				E12708851FF242FA00ECE880 /* main.m in Sources */,
+				E12708771FF242FA00ECE880 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E12708861FF242FA00ECE880 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E127088F1FF242FB00ECE880 /* LSAnimationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E12708911FF242FB00ECE880 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E127089A1FF242FB00ECE880 /* LSAnimationUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E127088C1FF242FA00ECE880 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E12708711FF242FA00ECE880 /* LSAnimation */;
+			targetProxy = E127088B1FF242FA00ECE880 /* PBXContainerItemProxy */;
+		};
+		E12708971FF242FB00ECE880 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E12708711FF242FA00ECE880 /* LSAnimation */;
+			targetProxy = E12708961FF242FB00ECE880 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E127089C1FF242FB00ECE880 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E127089D1FF242FB00ECE880 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E127089F1FF242FB00ECE880 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2163A6FF2A04DAEBBEC6165A /* Pods-LSAnimation.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LSAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baidu.LSAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E12708A01FF242FB00ECE880 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F8DA6226A1286358F6FA538 /* Pods-LSAnimation.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LSAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baidu.LSAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E12708A21FF242FB00ECE880 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LSAnimationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baidu.LSAnimationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LSAnimation.app/LSAnimation";
+			};
+			name = Debug;
+		};
+		E12708A31FF242FB00ECE880 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LSAnimationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baidu.LSAnimationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LSAnimation.app/LSAnimation";
+			};
+			name = Release;
+		};
+		E12708A51FF242FB00ECE880 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LSAnimationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baidu.LSAnimationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LSAnimation;
+			};
+			name = Debug;
+		};
+		E12708A61FF242FB00ECE880 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LSAnimationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baidu.LSAnimationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LSAnimation;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E127086D1FF242FA00ECE880 /* Build configuration list for PBXProject "LSAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E127089C1FF242FB00ECE880 /* Debug */,
+				E127089D1FF242FB00ECE880 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E127089E1FF242FB00ECE880 /* Build configuration list for PBXNativeTarget "LSAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E127089F1FF242FB00ECE880 /* Debug */,
+				E12708A01FF242FB00ECE880 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E12708A11FF242FB00ECE880 /* Build configuration list for PBXNativeTarget "LSAnimationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E12708A21FF242FB00ECE880 /* Debug */,
+				E12708A31FF242FB00ECE880 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E12708A41FF242FB00ECE880 /* Build configuration list for PBXNativeTarget "LSAnimationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E12708A51FF242FB00ECE880 /* Debug */,
+				E12708A61FF242FB00ECE880 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E127086A1FF242FA00ECE880 /* Project object */;
+}
