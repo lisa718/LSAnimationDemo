@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LSAnimation/ViewController.m"
-            timestampString = "535971224.771294"
+            filePath = "LSAnimation/LSNavbarAnimationController.m"
+            timestampString = "536049476.079113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
-            landmarkName = "-navbarAnimationBtnClick:"
+            startingLineNumber = "275"
+            endingLineNumber = "275"
+            landmarkName = "-gestureRecognizerShouldBegin:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

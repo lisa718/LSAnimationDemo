@@ -1,6 +1,7 @@
 //
 //  LSNavbarAnimationController.m
-//  LSMessages
+//  需求：
+//  1、
 //
 //  Created by baidu on 2017/12/26.
 //  Copyright © 2017年 baidu. All rights reserved.
@@ -8,12 +9,11 @@
 
 #import "LSNavbarAnimationController.h"
 #import "UIView+LayoutMethods.h"
+
+
 @import WebKit;
 
-@interface LSNavbarAnimationController (){
-    CGPoint _firstPoint;
-    CGPoint _currentPoint;
-}
+@interface LSNavbarAnimationController ()<WKNavigationDelegate,UIGestureRecognizerDelegate>
 
 @property (nonatomic,strong) UIView * topFixedView;
 @property (nonatomic,strong) UIView *maskView;
@@ -42,8 +42,10 @@
     // 添加手势
     [self.bottomScrollView addGestureRecognizer:self.panGes];
     self.navigationController.navigationBar.hidden = YES;
+    // 设置手势优先级处理手势冲突：当是两个自己定义的手势会好，因为scrollview，你不知道里面还有什么其他手势
+//    [self.bottomScrollView.scrollView.panGestureRecognizer requireGestureRecognizerToFail:self.panGes];
     
-    [self.bottomScrollView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://baidu.com"]]];
+    [self.bottomScrollView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]]];
     
 }
 
@@ -160,8 +162,6 @@
     animation.fillMode = kCAFillModeForwards;
     animation.type = kCATransitionPush;
     animation.subtype = kCATransitionFromBottom;
-
-    
     [self.navigationController.navigationBar.layer addAnimation:animation forKey:nil];
 
 }
@@ -225,16 +225,73 @@
     }
     return _panGes;
 }
+#pragma mark - 手势冲突处理
+// 处理手势冲突
+
+// 优先处理手势优先级
+// 询问是否这个手势是通过一个指定手势的触发才失败
+// 前面手势的优先级，要比后面的高，返回YES
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    if (self.panGes == gestureRecognizer) {
+        return YES;
+    }
+    return YES;
+}
+
+// 因为两个手势不可以同时识别，所以不实现这个,不能完全控制
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-    if (gestureRecognizer != self.panGes) {
-        if (self.bottomScrollView.ct_top > 64) {
+    return NO;
+}
+
+// 是不是要响应手势，好像都需要响应手势，需要在状态中判断
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
+    if (gestureRecognizer == self.panGes) {
+        // 当scrollview在顶部，如果是contentOffset > 0 有位移，当他有偏移量不需要响应手势，如果没有偏移量，则需要响应手势
+        // 当scrollview在顶部，如果是contentOffset <= 0 无位移，需要响应手势
+        // 但是这里屏蔽不掉里面本身有可以处理事件的情况，比如里面可以点击，可以有别的手势，需要在下面的过程中判断
+        if (self.bottomScrollView.scrollView.contentOffset.y > 0) {
             return NO;
         }
     }
     return YES;
-
 }
 
+// 具体要判断是否要响应手势
+// 响应之后状态判断，这里是在滑动的过程中，手势pan有状态，在移动
+// 手势在move过程中，如果到达顶部，继续往上滑动，则不响应手势
+// 手势在move过程中，如果到达顶部，继续向下滑动，则应该响应手势
+// 手势在move过程中，如果到达底部，继续向下滑动，则不响应手势
+// 手势在move过程中，如果到达底部，继续向上滑动，则响应手势
+// 其他都要响应YES
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    if (gestureRecognizer == self.panGes) {
+//        if (gestureRecognizer.state == UIGestureRecognizerStatePossible) {
+        // 移动距离
+        CGPoint panPoint = [self.panGes translationInView:self.bottomScrollView];
+        BOOL isMoveUp = panPoint.y <=0 ? YES:NO;
+
+        // 手势在move过程中，如果到达顶部，继续往上滑动，则不响应手势
+        if (self.bottomScrollView.ct_top == 64 && isMoveUp ) {
+            return NO;
+        }
+        
+        // 手势在move过程中，如果到达顶部，继续向下滑动，则应该响应手势
+        if (self.bottomScrollView.ct_top == 64 && !isMoveUp) {
+            return YES;
+        }
+        
+        // 手势在move过程中，如果到达底部，继续向下滑动，则不响应手势
+        if (self.bottomScrollView.ct_top == self.topFixedView.ct_bottom && !isMoveUp) {
+            return NO;
+        }
+        if (self.bottomScrollView.ct_top == self.topFixedView.ct_bottom && isMoveUp) {
+            return YES;
+        }
+        return YES;
+//        }
+    }
+    return YES;
+}
 
 
 @end
